@@ -11,19 +11,8 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
-
-
-
-
-//Middleware for handling CORS Policy
-//Option 1: Allow All Origins with default of cors(*)
-//app.use(cors());
-//Option 2: Allow Custom Origins
-
-
-
 const corsOptions = {
-    origin: 'https://enchanting-axolotl-565769.netlify.app/',
+    origin: '*',
     credentials: true,            //access-control-allow-credentials:true
     optionSuccessStatus: 200,
     allowedHeaders: ["Content-Type"],
