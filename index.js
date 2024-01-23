@@ -23,7 +23,7 @@ app.use(express.json());
 
 
 const corsOptions = {
-    origin: 'http://localhost:5173',
+    origin: 'https://enchanting-axolotl-565769.netlify.app/',
     credentials: true,            //access-control-allow-credentials:true
     optionSuccessStatus: 200,
     allowedHeaders: ["Content-Type"],
@@ -51,4 +51,8 @@ mongoose.connect(dbUrl)
         console.log(err)
     });
 
+
+app.get("*", (req, res) => {
+    return res.status(404).send("Page not found!!");
+})
 
