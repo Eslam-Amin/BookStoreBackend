@@ -18,10 +18,10 @@ app.use("/books", booksRouter);
 
 //Middleware for handling CORS Policy
 //Option 1: Allow All Origins with default of cors(*)
-//app.use(cors());
+app.use(cors());
 //Option 2: Allow Custom Origins
 app.use(cors({
-    origin: "https://bookstorebackend-hzhl.onrender.com/",
+    origin: "https://enchanting-axolotl-565769.netlify.app/",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type"],
 }))
