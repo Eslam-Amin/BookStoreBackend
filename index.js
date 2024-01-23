@@ -21,7 +21,7 @@ app.use("/books", booksRouter);
 //app.use(cors());
 //Option 2: Allow Custom Origins
 app.use(cors({
-    origin: "https://localhost:8000",
+    origin: "https://bookstorebackend-hzhl.onrender.com/",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type"],
 }))
