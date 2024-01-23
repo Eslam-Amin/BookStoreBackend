@@ -19,12 +19,16 @@ app.use(express.json());
 //Option 1: Allow All Origins with default of cors(*)
 //app.use(cors());
 //Option 2: Allow Custom Origins
-app.use(cors({
-    origin: "https://enchanting-axolotl-565769.netlify.app/",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type"],
-}))
 
+
+
+const corsOptions = {
+    origin: 'http://localhost:5173',
+    credentials: true,            //access-control-allow-credentials:true
+    optionSuccessStatus: 200,
+    allowedHeaders: ["Content-Type"],
+}
+app.use(cors(corsOptions));
 app.use("/books", booksRouter);
 ///app.use(cors({ origin: "http://localhost:5173/" }))
 
