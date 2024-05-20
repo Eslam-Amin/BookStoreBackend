@@ -63,6 +63,11 @@ Welcome to the Book-Store Backend repository. This backend server provides funct
   - `GET /api/books`
   - Retrieves a list of all books available in the store.
 
+## Deployment
+
+This server has been deployed to Render.com. You can access it through [this link](https://bookstorebackend-hzhl.onrender.com/books).
+
+
 ## Future Enhancements
 
 To enhance the project further, consider the following:
